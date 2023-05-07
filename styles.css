@@ -19,6 +19,36 @@ body {
   place-content: center;
 }
 
+header {
+  font-size: 1.6rem;
+  padding: 0 1.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav h2 {
+  font-size: 1.6rem;
+  margin: 0 auto;
+}
+
+nav p {
+  font-size: 2rem;
+  padding: .8rem 1.6rem;
+  color: rgb(247, 89, 37);
+  background-color: rgb(245, 246, 251);
+  border-radius: 100%;
+}
+
+
 main {
   display: flex;
 
@@ -31,32 +61,11 @@ main {
   text-align: center;
 }
 
-header {
-  font-size: 1.6rem;
-  padding: 1.8rem;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
-}
-
-
-nav p {
-  text-align: left;
-  font-size: 2rem;
-}
-
-
-tbody td{
+tbody td {
   padding: .8rem;
   border-radius: 999px;
+  cursor: pointer;
 }
 
 tbody td:hover {
@@ -85,4 +94,31 @@ footer ul {
 footer li {
   padding: 1rem;
   color: rgb(141, 146, 164);
+}
+
+
+.active {
+  background: rgb(247, 89, 37);
+  color: rgb(255, 255, 255);
+}
+
+.fist-element {
+  border-radius: 100% 0 0 100%;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(45deg, rgb(247, 89, 37),
+  rgb(247, 141, 106));
+}
+
+.last-element {
+  border-radius: 0 100% 100% 0;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(45deg, rgb(247, 89, 37),
+  rgb(247, 141, 106));
+}
+
+.midle-element {
+  border-radius: 0;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(45deg, rgb(247, 89, 37),
+  rgb(247, 141, 106));
 }
