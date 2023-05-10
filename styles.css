@@ -1,13 +1,13 @@
+:root {
+  font-size: 62.5%;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-:root {
-  font-size: 62.5%;
 }
 
 body {
@@ -20,19 +20,41 @@ body {
 }
 
 header {
-  font-size: 1.6rem;
-  padding: 0 1.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: rgb(247, 89, 37);
+}
+
+main {
+  padding: 2rem 0 0.5rem 0;
+  
+  text-align: center;
+  
+  border: 1px solid rgb(245, 246, 251);
+  border-radius: 4px;
+  box-shadow: 1px 2px 4px rgba(157, 156, 166, 0.3);
+}
+
+article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+section {
+  font-size: 1.2rem;
+}
+
+nav {
+  font-size: 1rem;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-}
-
-nav {
-  width: 100%;
-  display: flex;
-  align-items: center;
 }
 
 nav h2 {
@@ -46,35 +68,7 @@ nav p {
   color: rgb(247, 89, 37);
   background-color: rgb(245, 246, 251);
   border-radius: 100%;
-}
-
-
-main {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  padding: 1.8rem;
-  gap: 1rem;
-
-  text-align: center;
-}
-
-
-tbody td {
-  padding: .8rem;
-  border-radius: 999px;
   cursor: pointer;
-}
-
-tbody td:hover {
-  background-color: rgb(247, 89, 37);
-  color: rgb(255, 255, 255);
-}
-
-section {
-  font-size: 1.4rem;
 }
 
 footer {
@@ -92,33 +86,64 @@ footer ul {
 }
 
 footer li {
-  padding: 1rem;
+  padding: .8rem 1.4rem;
   color: rgb(141, 146, 164);
+}
+
+.week-days{
+  width: 100%;
+}
+
+.week-days ul {
+  font-size: 1.2rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.week-days ul li {
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.month-days ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.month-days ul li {
+  padding: 0.8rem;
+  margin-bottom: .2rem;
+}
+
+.month-days ul li:hover {
+  border-radius: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(247, 89, 37);
 }
 
 
 .active {
-  background: rgb(247, 89, 37);
+  border-radius: 100%;
   color: rgb(255, 255, 255);
+  background: rgb(247, 89, 37);
 }
 
-.fist-element {
+.start-element {
   border-radius: 100% 0 0 100%;
   color: rgb(255, 255, 255);
-  background: linear-gradient(45deg, rgb(247, 89, 37),
-  rgb(247, 141, 106));
+  background: rgb(247, 89, 37);
 }
 
 .last-element {
   border-radius: 0 100% 100% 0;
   color: rgb(255, 255, 255);
-  background: linear-gradient(45deg, rgb(247, 89, 37),
-  rgb(247, 141, 106));
+  background: rgb(247, 89, 37);
 }
 
 .midle-element {
   border-radius: 0;
   color: rgb(255, 255, 255);
-  background: linear-gradient(45deg, rgb(247, 89, 37),
-  rgb(247, 141, 106));
+  background: rgb(247, 89, 37);
 }
