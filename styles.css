@@ -115,6 +115,7 @@ footer li {
 .month-days ul li {
   padding: 0.8rem;
   margin-bottom: .2rem;
+  cursor: pointer;
 }
 
 .month-days ul li:hover {
