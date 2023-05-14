@@ -11,55 +11,60 @@
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
+  <script src="calendar.js" defer></script>
   <script src="scripts.js" defer></script>
   <title>Date Picker</title>
 </head>
 
 <body>
+  <div id="bg-blur"></div>
+  <div class="backdrop">
+    <div class="big-circle"></div>
+    <div class="medium-circle"></div>
+    <div class="small-circle"></div>
+  </div>
   <header>
     <h1>Date Picker</h1>
-    <!--  TODO: FINISH THE ASIDE MENU -->
-    <aside>
-      <table>
-        <thead>
-          <tr>
-            <th colspan="4">
-              Pick a Month
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>JAN</td>
-            <td>FEB</td>
-            <td>MAR</td>
-            <td>APR</td>
-          </tr>
-          <tr>
-            <td>MAY</td>
-            <td>JUN</td>
-            <td>JUL</td>
-            <td>AGU</td>
-          </tr>
-          <tr>
-            <td>SEP</td>
-            <td>OCT</td>
-            <td>NOV</td>
-            <td>DEC</td>
-          </tr>
-        </tbody>
-      </table>
-    </aside>
   </header>
   <main>
+    <aside id="month-popup">
+      <div id="month-popup-header">
+        <h2>
+          Pick a Month:
+        </h2>
+      </div>
+
+      <div id="month-popup-menu">
+        <ol id="month-list">
+
+          <li>Jan</li>
+          <li>Feb</li>
+          <li>Mar</li>
+          <li>Apr</li>
+
+
+          <li>May</li>
+          <li>Jun</li>
+          <li>Jul</li>
+          <li>Agu</li>
+
+
+          <li>Sep</li>
+          <li>Oct</li>
+          <li>Nov</li>
+          <li>Dec</li>
+
+        </ol>
+      </div>
+    </aside>
     <article>
 
       <section id="last-month">
-        <nav class="month-header">
+        <nav>
           <div class="left-arrow">
             <p>&lt;</p>
           </div>
-          <h2>January</h2>
+          <h2 id="last-month-title">January</h2>
         </nav>
         <div class="week-days">
           <ul>
@@ -118,8 +123,8 @@
       </section>
 
       <section id="current-month">
-        <nav class="month-header">
-          <h2>February</h2>
+        <nav>
+          <h2 id="current-month-title">February</h2>
           <div class="right-arrow">
             <p>&gt;</p>
           </div>

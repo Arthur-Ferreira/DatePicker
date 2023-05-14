@@ -11,6 +11,8 @@
 }
 
 body {
+  position: relative;
+
   font-family: 'Karla', sans-serif;
   font-size: 1.6rem;
 
@@ -30,12 +32,15 @@ header h1 {
 
 main {
   padding: 2rem 0 0.5rem 0;
-  
+
   text-align: center;
-  
+
+  background-color: rgb(255, 255, 255);
+
   border: 1px solid rgb(245, 246, 251);
   border-radius: 4px;
   box-shadow: 1px 2px 4px rgba(157, 156, 166, 0.3);
+
 }
 
 article {
@@ -43,11 +48,9 @@ article {
   align-items: center;
   justify-content: center;
   gap: 3rem;
-}
-
-section {
   font-size: 1.2rem;
 }
+
 
 nav {
   font-size: 1rem;
@@ -60,6 +63,7 @@ nav {
 nav h2 {
   font-size: 1.6rem;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 nav p {
@@ -85,12 +89,87 @@ footer ul {
   justify-content: center;
 }
 
-footer li {
+footer ul li {
   padding: .8rem 1.4rem;
   color: rgb(141, 146, 164);
+  cursor: pointer;
 }
 
-.week-days{
+footer ul li:hover {
+  color: rgb(247, 89, 37);
+}
+
+/* Month Pop Up Section */
+
+#month-popup {
+  position: fixed;
+  top: 34%;
+  left: 40%;
+  width: 20%;
+
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgb(0, 0, 0);
+  display: none;
+}
+
+#bg-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  
+  display: none;
+}
+
+#month-menu {
+
+  padding: 2rem;
+
+}
+
+#month-popup-header {
+  margin-top: 1rem;
+}
+
+#month-popup-header h2 {
+  font-size: 2rem;
+  color: rgb(247, 89, 37);
+}
+
+
+#month-popup-menu ol {
+  font-weight: bold;
+  margin: 1rem 0;
+  padding: 2rem;
+
+  list-style: none;
+
+  display: grid;
+  gap: .6rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+#month-popup-menu ol li {
+
+  border: 1px solid rgba(157, 156, 166, 0.3);
+  border-radius: 8px;
+  padding: 1rem .5rem;
+  cursor: pointer;
+
+}
+
+#month-popup-menu ol li:hover {
+  color: white;
+  background-color: rgb(247, 89, 37);
+  border-color: rgba(247, 89, 37, 0.3);
+}
+
+
+.week-days {
   width: 100%;
 }
 
@@ -124,6 +203,45 @@ footer li {
   background-color: rgb(247, 89, 37);
 }
 
+/* Background Section */
+.backdrop {
+  position: relative;
+}
+
+.big-circle {
+  width: 36rem;
+  height: 36rem;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #f65d28, #fd8e45);
+  position: absolute;
+  top: -12rem;
+  left: -18rem;
+  z-index: -1;
+}
+
+.medium-circle {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  background: linear-gradient(to right, #f65d28, #fd8e45);
+  position: absolute;
+  top: 28rem;
+  left: 46rem;
+  z-index: -1;
+}
+
+.small-circle {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background: linear-gradient(to right, #f65d28, #fd8e45);
+  position: absolute;
+  top: 2rem;
+  left: 52rem;
+  z-index: -1;
+}
+
+/* Select Days Section  */
 
 .active {
   border-radius: 100%;
@@ -148,3 +266,6 @@ footer li {
   color: rgb(255, 255, 255);
   background: rgb(247, 89, 37);
 }
+
+
+
