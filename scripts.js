@@ -15,8 +15,8 @@ const months = [
 
 
 const daysLists = document.querySelectorAll('.days-list')
-const lastMonthTitleElement = document.getElementById('last-month-title')
-const currentMonthElement = document.getElementById('current-month-title')
+const lastMonthTitleElement = document.querySelector('#last-month-title h2')
+const currentMonthElement = document.querySelector('#current-month-title h2')
 const bgBlurElement = document.getElementById('bg-blur')
 const monthPopUpElement = document.getElementById('month-popup')
 const monthList = document.getElementById('month-list')
@@ -24,12 +24,12 @@ const monthList = document.getElementById('month-list')
 
 
 const date = new Date()
-const year = date.getFullYear()
-const month = date.getMonth()
+const currentYear = date.getFullYear()
+const currentMonth = date.getMonth()
 
 
-daysLists.forEach(list => {
-  listenForClicks(list)
+daysLists.forEach(day => {
+  listenForClicks(day)
 })
 
 function listenForClicks(objs) {
@@ -46,3 +46,4 @@ bgBlurElement.addEventListener('click', closeMonthMenu)
 monthList.addEventListener('click', selectMonth)
 
 
+renderCalendar()

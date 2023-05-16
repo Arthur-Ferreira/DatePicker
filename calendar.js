@@ -20,27 +20,52 @@ function selectMonth(event) {
     return
   }
 
-  const selectedMonth = event.target
+//   const selectedMonth = event.target
 
-  console.dir(selectedMonth)
-  console.dir(monthList)
-  // lastMonthTitleElement.innerText = `${months}`
+//   console.dir(selectedMonth)
+//   console.dir(monthList)
+//   lastMonthTitleElement.innerText = `${months[month]}`
 
 
   closeMonthMenu()
 }
 
 
-function renderCalendar() {
-  let lastDateOfMonth = new Date(year, month + 1, 0).getDate()
-  let liTag = ''
 
-  for (let i = 1; i <= lastDateOfMonth; i++) {
-    liTag = `<li>${i}</li>`
+function renderCalendar() {
+  
+  let firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay()
+  let lastDateOfMonth = new Date(currentYear, currentMonth + 1, 0).getDate()
+  
+  let lastDayOfMonth = new Date(currentYear, currentMonth, lastDateOfMonth).getDay()
+  let lastDateOfLastMonth = new Date(currentYear, currentMonth, 0).getDate()
+
+  let liTag = ''
+  
+  for (let i = firstDayOfMonth; i > 0; i--) {
+    liTag += `<li class="inactive">${lastDateOfLastMonth - i + 1}</li>`
   }
 
+  for (let i = 1; i <= lastDateOfMonth; i++) {
+    liTag += `<li>${i}</li>`
+  }
+
+  for (let i = lastDayOfMonth; i < 6; i++) {
+    liTag += `<li class="inactive">${i - lastDayOfMonth + 1}</li>`
+  }
   
+  lastMonthTitleElement.innerText = `${months[currentMonth - 1]}`
+  currentMonthElement.innerText = `${months[currentMonth]}`
+  
+  daysLists.forEach(list => [
+    list.innerHTML = liTag
+  ])
 }
+
+
+
+
+
 
 
 
