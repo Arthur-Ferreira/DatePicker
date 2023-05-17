@@ -183,7 +183,7 @@ footer ul li:hover {
 
 /* End of Pop Up Section */
 
-#last-month {
+#current-month {
   display: none;
 }
 
@@ -271,8 +271,7 @@ footer ul li:hover {
 }
 
 .inactive {
-  color: rgb(255, 255, 255);
-  background: rgb(95, 95, 95);
+  color: rgba(158, 158, 158, 0.6);
 }
 
 .start-element {
@@ -335,7 +334,7 @@ footer ul li:hover {
   
   /* Month Section */
   
-  #last-month {
+  #current-month {
     display: block;
   }
 
